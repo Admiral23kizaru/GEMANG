@@ -5,7 +5,8 @@ import { fileURLToPath, URL } from 'node:url'
 const page = (name) => fileURLToPath(new URL(`./${name}/index.html`, import.meta.url))
 
 export default defineConfig({
-  base: '/PORTFOLIO929/',
+  // GitHub Pages publishes this repository at https://admiral23kizaru.github.io/GEMANG/
+  base: '/GEMANG/',
   plugins: [vue()],
   build: {
     rollupOptions: {
