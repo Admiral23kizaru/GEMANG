@@ -7,5 +7,18 @@ const page = (name) => fileURLToPath(new URL(`./${name}/index.html`, import.meta
 export default defineConfig({
   base: '/GEMANG/',
   plugins: [vue()],
-  build: { rollupOptions: { input: { home:fileURLToPath(new URL('./index.html', import.meta.url)), projects:page('projects'), qa:page('qa'), reviews:page('reviews'), skills:page('skills'), certifications:page('certifications'), experience:page('experience'), contact:page('contact') } } },
+  build: {
+    rollupOptions: {
+      input: {
+        home: fileURLToPath(new URL('./index.html', import.meta.url)),
+        projects: page('projects'),
+        qa: page('qa'),
+        process: page('process'),
+        skills: page('skills'),
+        certifications: page('certifications'),
+        experience: page('experience'),
+        contact: page('contact'),
+      },
+    },
+  },
 })
